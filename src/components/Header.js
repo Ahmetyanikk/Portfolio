@@ -16,11 +16,11 @@ const socials = [
   },
   {
     icon: faGithub,
-    url: "https://github.com",
+    url: "https://github.com/Ahmetyanikk",
   },
   {
     icon: faLinkedin,
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/ahmet-yan%C4%B1k-7bba0b1a8/",
   },
   {
     icon: faMedium,
@@ -64,18 +64,26 @@ const Header = () => {
           alignItems="center"
         >
           <nav>
+          <HStack spacing={8}>
+             <a href={socials[0].url}>
+             <FontAwesomeIcon icon={socials[0].icon} size="2x"/>
+             </a>
             
-             <FontAwesomeIcon icon={socials.map} />
-             <FontAwesomeIcon icon={faGithub} />
-             <FontAwesomeIcon icon={faLinkedin} />  
-
-
+             <a href={socials[1].url}>
+             <FontAwesomeIcon icon={socials[1].icon} size="2x" />
+             </a>
+             <a href={socials[2].url}>
+             <FontAwesomeIcon icon={socials[2].icon} size="2x" />  
+             </a>
+            </HStack>
 
             
           </nav>
           <nav>
             <HStack spacing={8}>
-              {/* Add links to Projects and Contact me section */}
+            <a href="#projects" onClick={handleClick("projects")}>Projects</a>
+              <a href="#contact" onClick={handleClick("contactme")}>Contact Me</a>
+
             </HStack>
           </nav>
         </HStack>
